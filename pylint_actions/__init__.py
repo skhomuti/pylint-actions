@@ -15,8 +15,11 @@ class ActionsReporter(TextReporter):
     Reporter for GitHub Actions based on the TextReporter.
     """
     name = "actions"
-    line_format = "::error file={path},line={line},endLine={end_line}," \
-                  "title=[{msg_id}({symbol}){obj}]::{msg}"
+
+    def __init__(self, *args, **kwargs):
+        self.line_format = "::error file={path},line={line},endLine={end_line}," \
+                           "title=Pylint: {msg_id} ({symbol})::{msg}"
+        super().__init__(*args, **kwargs)
 
 
 def register(linter: PyLinter):
