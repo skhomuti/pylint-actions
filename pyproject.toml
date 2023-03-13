@@ -1,7 +1,25 @@
 [tool.poetry]
 name = "pylint-actions"
-version = "0.2.0"
-description = ""
+version = "0.3.0"
+description = "Pylint plugin for GitHub Actions"
+license = "MIT"
+homepage = "https://github.com/skhomuti/pylint-actions"
+repository = "https://github.com/skhomuti/pylint-actions"
+keywords = ["pylint", "github", "actions", "linter", "static code analysis", "python"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
 authors = ["skhomuti <skhomuti@gmail.com>"]
 readme = "README.md"
 packages = [
