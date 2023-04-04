@@ -11,9 +11,9 @@ if TYPE_CHECKING:
     from pylint.lint.pylinter import PyLinter
 
 levels = {
-    "I": "info",
-    "C": "info",
-    "R": "info",
+    "I": "notice",
+    "C": "notice",
+    "R": "notice",
     "W": "warning",
     "E": "error",
     "F": "error",
