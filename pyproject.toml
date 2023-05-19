@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pylint-actions"
-version = "0.3.1"
+version = "0.4.0"
 description = "Pylint plugin for GitHub Actions"
 license = "MIT"
 homepage = "https://github.com/skhomuti/pylint-actions"
@@ -27,7 +27,7 @@ packages = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = ">=3.7.2,<4.0"
 
 
 [tool.poetry.group.dev.dependencies]
