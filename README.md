@@ -1,3 +1,6 @@
+![](https://img.shields.io/pypi/v/pylint-actions)
+![](https://img.shields.io/pypi/dm/pylint-actions)
+![](https://img.shields.io/pypi/pyversions/pylint-actions)
 # Pylint plugin for GitHub Actions annotations
 This is a plugin for [Pylint](https://www.pylint.org/) that allows it to output annotations 
 in the format that GitHub Actions understands. 
