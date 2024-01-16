@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pylint-actions"
-version = "0.4.0"
+version = "0.5.0"
 description = "Pylint plugin for GitHub Actions"
 license = "MIT"
 homepage = "https://github.com/skhomuti/pylint-actions"
