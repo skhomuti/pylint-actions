@@ -17,4 +17,4 @@ jobs:
 
       - run: uv sync --locked
       - run: uv pip install .
-      - run: pylint pylint_actions -f actions
+      - run: uv run pylint pylint_actions -f actions

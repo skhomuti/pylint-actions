@@ -11,5 +11,5 @@ jobs:
       
       - run: uv sync --locked
       - run: uv pip install .
-      - run: pylint examples -f actions
+      - run: uv run pylint examples -f actions
         continue-on-error: true
