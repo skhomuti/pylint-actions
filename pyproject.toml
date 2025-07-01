@@ -1,8 +1,14 @@
-[tool.poetry]
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
 name = "pylint-actions"
 version = "0.5.0"
 description = "Pylint plugin for GitHub Actions"
+readme = "README.md"
 license = "MIT"
+requires-python = ">=3.8"
 homepage = "https://github.com/skhomuti/pylint-actions"
 repository = "https://github.com/skhomuti/pylint-actions"
 keywords = ["pylint", "github", "actions", "linter", "static code analysis", "python"]
@@ -20,24 +26,13 @@ classifiers = [
     "Topic :: Software Development :: Testing",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
-authors = ["skhomuti <skhomuti@gmail.com>"]
-readme = "README.md"
-packages = [
-    {include = "pylint_actions"},
-]
+authors = [{name = "skhomuti", email = "skhomuti@gmail.com"}]
+dependencies = ["pylint>=3.0.3,<4"]
+[project.optional-dependencies]
+dev = ["pylint>=3.0.3,<4"]
 
-[tool.poetry.dependencies]
-python = ">=3.8,<4.0"
-pylint = "^3.0.3"
-
-
-[tool.poetry.group.dev.dependencies]
-pylint = "^3.0.3"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
-
+[tool.hatch.build.targets.wheel]
+packages = ["pylint_actions"]
 
 [tool.pylint.main]
 load-plugins = "pylint_actions"
