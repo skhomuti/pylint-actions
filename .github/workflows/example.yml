@@ -6,7 +6,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v3
-      - run: curl -sSL https://install.python-poetry.org | python3 -
-      - run: poetry install
-      - run: poetry run pylint examples -f actions
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+      
+      - run: uv sync --locked
+      - run: uv pip install .
+      - run: uv run pylint examples -f actions
         continue-on-error: true

@@ -26,5 +26,5 @@ Next, run pylint with the `--output-format=actions` option, or shorted `-f actio
 In your GitHub Actions workflow, use it like this:
 ```yaml
 - name: Run pylint
-  run: poetry run pylint -f actions src
+  run: uv pip install pylint pylint-actions && pylint -f actions src
 ```
