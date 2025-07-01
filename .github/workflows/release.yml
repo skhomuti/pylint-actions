@@ -18,7 +18,9 @@ jobs:
       - uses: actions/setup-python@v3
       - name: Install uv
         uses: astral-sh/setup-uv@v5
-      - run: uv pip install -e .
+
+      - run: uv sync --locked
+
       - run: uv build
       - run: uv publish --token ${{ secrets.PYPI_TOKEN }}
       - run: gh release create $(uv version --short) --generate-notes
