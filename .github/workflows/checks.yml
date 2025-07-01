@@ -12,6 +12,9 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - run: curl -sSL https://install.python-poetry.org | python3 -
-      - run: poetry install
-      - run: poetry run pylint pylint_actions -f actions
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - run: uv sync --locked
+      - run: uv pip install .
+      - run: uv run pylint pylint_actions -f actions
