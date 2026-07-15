@@ -8,7 +8,7 @@ version = "0.6.0"
 description = "Pylint plugin for GitHub Actions"
 readme = "README.md"
 license = "MIT"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 homepage = "https://github.com/skhomuti/pylint-actions"
 repository = "https://github.com/skhomuti/pylint-actions"
 keywords = ["pylint", "github", "actions", "linter", "static code analysis", "python"]
