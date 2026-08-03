@@ -8,7 +8,7 @@ version = "0.6.0"
 description = "Pylint plugin for GitHub Actions"
 readme = "README.md"
 license = "MIT"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 homepage = "https://github.com/skhomuti/pylint-actions"
 repository = "https://github.com/skhomuti/pylint-actions"
 keywords = ["pylint", "github", "actions", "linter", "static code analysis", "python"]
@@ -27,9 +27,9 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 authors = [{name = "skhomuti", email = "skhomuti@gmail.com"}]
-dependencies = ["pylint>=3.0.3,<4"]
+dependencies = ["pylint>=3.0.3,<5"]
 [project.optional-dependencies]
-dev = ["pylint>=3.0.3,<4"]
+dev = ["pylint>=3.0.3,<5"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["pylint_actions"]
